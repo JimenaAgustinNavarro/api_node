@@ -1,4 +1,4 @@
-import { crearDescuento,eliminarDescuento,modificarDescuento,obtenerDescuentoById,obtenerDescuentos } from '../Controllers/DescuentoControlador';
+import { crearDescuento,eliminarDescuento,modificarDescuento,obtenerDescuentoById,obtenerDescuentos } from '../controllers/DescuentoControlador';
 import { Router } from 'express';
 
 const routerDescuento = Router();
