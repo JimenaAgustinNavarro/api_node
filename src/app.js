@@ -12,6 +12,7 @@ app.use(express.json());
 
 app.use(routerUsuario)
 app.use(routerDescuento)
+app.use(routerUsuario)
 
 
 export default app

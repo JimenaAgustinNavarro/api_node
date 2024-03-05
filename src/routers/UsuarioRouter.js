@@ -1,4 +1,5 @@
 import { crearUsuario,login,enviarPIN,verificarPIN,cambiarPassword,listaPaises,logout } from '../controllers/UsuarioControlador';
+import { verificarContrasena, eliminarTemporalmente, restaurarCuenta, eliminarCuentasVencidas, eliminarPermanentemente} from "../controllers/UsuarioControlador"
 import { Router } from 'express';
 
 const routerUsuario = Router();
@@ -11,5 +12,12 @@ routerUsuario.post('/logout',logout)
 routerUsuario.post('/enviarPin',enviarPIN)
 routerUsuario.post('/verificarPin',verificarPIN)
 routerUsuario.post('/cambiarPassword',cambiarPassword)
+
+//RUTAS PARA ELIMINACIÓN DE CUENTA
+routerUsuario.post("/verificar/:id", verificarContrasena)
+routerUsuario.post("/eliminar-temporal/:id", eliminarTemporalmente)
+routerUsuario.post("/restaurar-cuenta/:id", restaurarCuenta)
+routerUsuario.post("/eliminar_cuenta-vencida/:id", eliminarCuentasVencidas)
+routerUsuario.post("/eliminar-permanente/:id", eliminarPermanentemente)
 
 export default routerUsuario;  
